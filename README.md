@@ -1,16 +1,55 @@
-# ⏰ AhmadSoftwareBot – Telegram Reminder Bot
+# ⏰ RemindersBot – Telegram Reminder Bot
 
-**AhmadSoftwareBot** is my **first Telegram bot**, built as part of a **3-hour hands-on course** focused on learning Telegram bot development through a real, production-style project.
+**RemindersBot** is my **first Telegram bot**, built as part of a **3-hour hands-on course** focused on learning
+Telegram bot development through a real, production-style project.
 
-This bot allows users to **create reminders directly inside Telegram**, stores them in a **PostgreSQL database**, and runs **24/7 on Heroku**.
+This bot allows users to **create reminders directly inside Telegram**, stores them in a **PostgreSQL database**, and
+runs **24/7 on Heroku**.
 
 The goal of this project was to move beyond theory and understand how a real backend-powered bot works end to end.
 
 ---
 
+## ⚡ Quick Start (Local Setup)
+
+```bash
+git clone https://github.com/your-username/remindersbot.git
+cd remindersbot
+pip install -r requirements.txt
+```
+
+## 🔐 Environment Variables
+
+This project uses environment variables for security.
+
+Create a `.env` file based on `.env.example`:
+
+```env
+BOT_TOKEN=
+DATABASE_URL=
+```
+
+## 🖼️ Screenshots
+
+### Start Menu
+
+![Start Menu](screenshots/start.png)
+
+### Add Reminder Flow
+
+![Add Reminder](screenshots/add-reminder.png)
+
+### List Reminders
+
+![List](screenshots/list.png)
+
+### Status Overview
+
+![Status](screenshots/status.png)
+
 ## 📌 Project Overview
 
-AhmadSoftwareBot is a **Telegram Reminder Bot** that allows users to:
+RemindersBot is a **Telegram Reminder Bot** that allows users to:
 
 - Add reminders step by step
 - Store reminders persistently in a database
@@ -43,13 +82,14 @@ This project helped me understand how **Telegram bots behave like backend servic
 
 ## 🤖 Bot Features
 
-- `/start` – Start the bot and show main menu  
-- Add reminder via interactive buttons  
-- Store reminders in PostgreSQL  
-- Automatic reminder delivery  
-- `/list` – View upcoming reminders  
-- `/cancel` – Cancel current action  
-- Graceful error handling and user state management  
+- `/start` – Start the bot and show main menu
+- Add reminder via interactive buttons
+- Store reminders in PostgreSQL
+- Automatic reminder delivery
+- `/list` – View upcoming reminders
+- `/cancel` – Cancel current action
+- `/status` – View reminder statistics
+- Graceful error handling and user state management
 
 ---
 
@@ -82,6 +122,7 @@ This project helped me understand how **Telegram bots behave like backend servic
 The bot is deployed on **Heroku** and uses **Heroku Postgres** for data storage.
 
 Deployment highlights:
+
 - Environment variables for secrets (`BOT_TOKEN`, `DATABASE_URL`)
 - Worker-based execution
 - Automatic restarts and monitoring
@@ -93,12 +134,17 @@ Deployment highlights:
 
 .
 ├── database/
-│ └── db.py
+│ ├── db.py
+│ └── actions.py
+├── utils/
+│ ├── constants.py
+│ ├── helpers.py
+│ └── job.py
 ├── main.py
 ├── requirements.txt
 ├── Procfile
-├── README.md
-
+├── .env.example
+└── README.md
 
 
 
@@ -107,10 +153,10 @@ Deployment highlights:
 
 ## 📚 Course Information
 
-- **Course Duration:** ~3 hours  
-- **Focus:** Practical Telegram bot development  
-- **Level:** Beginner to early-intermediate  
-- **Approach:** Project-based, hands-on learning  
+- **Course Duration:** ~3 hours
+- **Focus:** Practical Telegram bot development
+- **Level:** Beginner to early-intermediate
+- **Approach:** Project-based, hands-on learning
 
 ---
 
@@ -128,12 +174,22 @@ It marks an important step in my journey toward becoming a **backend-focused sof
 
 ---
 
+## 🔮 Future Improvements
+
+- Recurring reminders (daily / weekly)
+- Time-based reminders (specific date & time)
+- Timezone support
+- Inline keyboards
+- Reminder editing
+- Auto-cleanup of old completed reminders
+
 ## 📬 Contact
 
 If you’d like to discuss this project or collaborate:
 
 - GitHub: **Ahmad**
-- Telegram Bot: **@ahmadSoftwareBot**
+- Telegram Bot: **@ahmad_reminder_bot**
+- 🔗 Live Bot: https://t.me/ahmad_reminder_bot
 
 ---
 

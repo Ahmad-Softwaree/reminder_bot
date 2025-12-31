@@ -1,0 +1,44 @@
+# ---- STATES ----
+USER_STATE = "USER_STATE"
+ADD_REMINDER = "ADD_REMINDER"
+DELETE_REMINDER = "DELETE_REMINDER"
+WAITING_FOR_MINUTES = "WAITING_FOR_MINUTES"
+USER_REMINDER_TEXT = 'USER_REMINDER_TEXT'
+REMINDER_JOB_QUEUE = 'REMINDER_'
+# ---- STATES ----
+
+# COMMANDS
+START_CMD = "start"
+ADD_REMINDER_CMD = "add"
+LIST_CMD = "list"
+DELETE_CMD = "delete"
+SHOW_STATUS_CMD = "status"
+HELP_CMD = "help"
+CANCEL_CMD = "cancel"
+RETURN_CMD = "back"
+# COMMANDS
+
+# BUTTONS
+START_BTN_TEXT = "🏠 Start"
+ADD_REMINDER_BTN_TEXT = "➕ Add Reminder"
+LIST_BTN_TEXT = "📋 My Reminders"
+DELETE_BTN_TEXT = "🗑 Delete Reminder"
+SHOW_STATUS_BTN_TEXT = "📊 Status"
+HELP_BTN_TEXT = "❓ Help"
+CANCEL_BTN_TEXT = "❌ Cancel"
+RETURN_BTN_TEXT = "↩️ Back"
+# BUTTONS
+
+# JOB
+
+JOB_CHAT_ID = 'chat_id'
+JOB_TEXT = 'text'
+
+# JOB
+
+
+# TABLES
+
+REMINDER_TABLE = 'reminder'
+
+# TABLES
